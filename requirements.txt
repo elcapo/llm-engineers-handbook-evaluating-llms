@@ -1,0 +1,10 @@
+transformers
+datasets
+bitsandbytes
+accelerate
+torch
+langchain
+langchain-ollama
+langchain-huggingface
+python-dotenv
+rich
