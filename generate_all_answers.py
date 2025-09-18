@@ -9,12 +9,12 @@ from evaluating_llms.answers_dataset import AnswersDataset
 
 if len(sys.argv) < 2:
     print("At least a [cyan]model_id[/cyan] is required to execute this script:\n")
-    print("[blue]./fetch_all_answers.py [cyan]meta-llama/Meta-Llama-3.1-8B-Instruct")
+    print("[blue]./generate_all_answers.py [cyan]meta-llama/Meta-Llama-3.1-8B-Instruct")
     exit(1)
 
 if len(sys.argv) > 3:
     print("Only [cyan]model_id[/cyan] and [cyan]endpoint_url[/cyan] are supported parameters:\n")
-    print("[blue]./fetch_all_answers.py [cyan]mlabonne/TwinLlama-3.1-8B-GGUF https://endpoint-url.location.provider.endpoints.huggingface.cloud")
+    print("[blue]./generate_all_answers.py [cyan]mlabonne/TwinLlama-3.1-8B-GGUF https://endpoint-url.location.provider.endpoints.huggingface.cloud")
     exit(1)
 
 model_id = sys.argv[1]

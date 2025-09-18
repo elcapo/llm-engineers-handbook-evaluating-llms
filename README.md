@@ -87,13 +87,13 @@ An example of the output for each model can be found in:
 Generate and save all answers for a specific model:
 
 ```bash
-./fetch_all_answers.py <model_id> [endpoint_url]
+./generate_all_answers.py <model_id> [endpoint_url]
 ```
 
 Examples:
 ```bash
-./fetch_all_answers.py meta-llama/Meta-Llama-3.1-8B-Instruct
-./fetch_all_answers.py mlabonne/TwinLlama-3.1-8B-GGUF https://endpoint-url.location.provider.endpoints.huggingface.cloud
+./generate_all_answers.py meta-llama/Meta-Llama-3.1-8B-Instruct
+./generate_all_answers.py mlabonne/TwinLlama-3.1-8B-GGUF https://endpoint-url.location.provider.endpoints.huggingface.cloud
 ```
 
 The generated datasets in JSONL format can be found in:
