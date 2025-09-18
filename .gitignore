@@ -1,5 +1,6 @@
-datasets/
 .devcontainer
 __pycache__
+.python-version
+.vscode
 .venv
 .env

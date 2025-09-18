@@ -1,0 +1,57 @@
+                                                                                  Prompts (first 5 records)                                                                                   
+╔══════════════════════════════════════════════════════════════╤══════════════════════════════════════════════════════════════╤══════════════════════════════════════════════════════════════╗
+║ Instruction                                                  │ Output                                                       │ Prompt                                                       ║
+╟──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────╢
+║ Discuss the importance of logging during the summarization   │ Logging is essential during the summarization process as it  │ Below is an instruction that describes a task. Write a       ║
+║ process.                                                     │ provides a trail of events and helps in diagnosing issues    │ response that appropriately completes the request.           ║
+║                                                              │ that may arise. Starting with logging the initiation of      │                                                              ║
+║                                                              │ summarization for a document ID, it continues to log the     │ ### Instruction:                                             ║
+║                                                              │ completion of the task. In the event of an error, logging    │ Discuss the importance of logging during the summarization   ║
+║                                                              │ captures the details of the failure, enabling developers to  │ process.                                                     ║
+║                                                              │ troubleshoot effectively. This systematic logging of actions │                                                              ║
+║                                                              │ and errors not only enhances transparency but also aids in   │ ### Response:                                                ║
+║                                                              │ monitoring performance and ensuring the reliability of the   │                                                              ║
+║                                                              │ summarization service.                                       │                                                              ║
+╟──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────╢
+║ Describe the method used to create a basic payload.          │ The method _create_default_payload is employed to form a     │ Below is an instruction that describes a task. Write a       ║
+║                                                              │ fundamental payload that includes a sample input alongside   │ response that appropriately completes the request.           ║
+║                                                              │ default settings. These settings typically encompass         │                                                              ║
+║                                                              │ parameters such as max_new_tokens and temperature,           │ ### Instruction:                                             ║
+║                                                              │ establishing a baseline for further modifications and        │ Describe the method used to create a basic payload.          ║
+║                                                              │ ensuring that the payload is formatted correctly for         │                                                              ║
+║                                                              │ subsequent processing.                                       │ ### Response:                                                ║
+║                                                              │                                                              │                                                              ║
+╟──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────╢
+║ Calculate the VRAM required for a 7B model using BF16        │ To calculate the VRAM required for a 7B model using BF16     │ Below is an instruction that describes a task. Write a       ║
+║ precision.                                                   │ precision, we start with the understanding that the model    │ response that appropriately completes the request.           ║
+║                                                              │ has approximately 7 billion parameters. Each parameter in    │                                                              ║
+║                                                              │ BF16 format requires 2 bytes. Therefore, the total VRAM      │ ### Instruction:                                             ║
+║                                                              │ requirement can be calculated as follows: 7 billion          │ Calculate the VRAM required for a 7B model using BF16        ║
+║                                                              │ parameters multiplied by 2 bytes results in 14 billion       │ precision.                                                   ║
+║                                                              │ bytes. Since 1GB equals 1 billion bytes, this translates to  │                                                              ║
+║                                                              │ 14GB of VRAM required to load a 7B model for inference in    │ ### Response:                                                ║
+║                                                              │ half BF16 precision.                                         │                                                              ║
+╟──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────╢
+║ Analyze the role of VectorDB and retrieval strategies in AI  │ VectorDB and retrieval strategies play a critical role in    │ Below is an instruction that describes a task. Write a       ║
+║ applications.                                                │ the performance of AI applications. Precision and speed are  │ response that appropriately completes the request.           ║
+║                                                              │ paramount, and refining retrieval strategies to be both      │                                                              ║
+║                                                              │ lightning fast and incredibly accurate is essential for      │ ### Instruction:                                             ║
+║                                                              │ success. These strategies enable the AI to quickly access    │ Analyze the role of VectorDB and retrieval strategies in AI  ║
+║                                                              │ and retrieve relevant information, ensuring that responses   │ applications.                                                ║
+║                                                              │ are not only timely but also relevant to the user's needs.   │                                                              ║
+║                                                              │                                                              │ ### Response:                                                ║
+║                                                              │                                                              │                                                              ║
+╟──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────╢
+║ Summarize the importance of the Settings class in the        │ The Settings class is essential for defining the             │ Below is an instruction that describes a task. Write a       ║
+║ context of document models.                                  │ configuration parameters of document models in Object        │ response that appropriately completes the request.           ║
+║                                                              │ Document Mapping. It specifies the name of the collection    │                                                              ║
+║                                                              │ associated with each document type, ensuring that data is    │ ### Instruction:                                             ║
+║                                                              │ organized and accessible within the MongoDB database. Each   │ Summarize the importance of the Settings class in the        ║
+║                                                              │ specific document class, such as UserDocument or             │ context of document models.                                  ║
+║                                                              │ RepositoryDocument, utilizes its own Settings class to       │                                                              ║
+║                                                              │ establish these parameters. This structure not only provides │ ### Response:                                                ║
+║                                                              │ clarity and consistency in how documents are managed, but it │                                                              ║
+║                                                              │ also supports the overall integrity of data interactions,    │                                                              ║
+║                                                              │ allowing for efficient querying and manipulation of the      │                                                              ║
+║                                                              │ stored information.                                          │                                                              ║
+╚══════════════════════════════════════════════════════════════╧══════════════════════════════════════════════════════════════╧══════════════════════════════════════════════════════════════╝

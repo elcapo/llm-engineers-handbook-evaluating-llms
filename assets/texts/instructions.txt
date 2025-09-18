@@ -1,0 +1,36 @@
+                                                                                Instructions (first 5 records)                                                                                
+╔═══════════════════════════════════════════════════════════════════════════════════╤════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Instruction                                                                       │ Output                                                                                                 ║
+╟───────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Discuss the importance of logging during the summarization process.               │ Logging is essential during the summarization process as it provides a trail of events and helps in    ║
+║                                                                                   │ diagnosing issues that may arise. Starting with logging the initiation of summarization for a document ║
+║                                                                                   │ ID, it continues to log the completion of the task. In the event of an error, logging captures the     ║
+║                                                                                   │ details of the failure, enabling developers to troubleshoot effectively. This systematic logging of    ║
+║                                                                                   │ actions and errors not only enhances transparency but also aids in monitoring performance and ensuring ║
+║                                                                                   │ the reliability of the summarization service.                                                          ║
+╟───────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Describe the method used to create a basic payload.                               │ The method _create_default_payload is employed to form a fundamental payload that includes a sample    ║
+║                                                                                   │ input alongside default settings. These settings typically encompass parameters such as max_new_tokens ║
+║                                                                                   │ and temperature, establishing a baseline for further modifications and ensuring that the payload is    ║
+║                                                                                   │ formatted correctly for subsequent processing.                                                         ║
+╟───────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Calculate the VRAM required for a 7B model using BF16 precision.                  │ To calculate the VRAM required for a 7B model using BF16 precision, we start with the understanding    ║
+║                                                                                   │ that the model has approximately 7 billion parameters. Each parameter in BF16 format requires 2 bytes. ║
+║                                                                                   │ Therefore, the total VRAM requirement can be calculated as follows: 7 billion parameters multiplied by ║
+║                                                                                   │ 2 bytes results in 14 billion bytes. Since 1GB equals 1 billion bytes, this translates to 14GB of VRAM ║
+║                                                                                   │ required to load a 7B model for inference in half BF16 precision.                                      ║
+╟───────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Analyze the role of VectorDB and retrieval strategies in AI applications.         │ VectorDB and retrieval strategies play a critical role in the performance of AI applications.          ║
+║                                                                                   │ Precision and speed are paramount, and refining retrieval strategies to be both lightning fast and     ║
+║                                                                                   │ incredibly accurate is essential for success. These strategies enable the AI to quickly access and     ║
+║                                                                                   │ retrieve relevant information, ensuring that responses are not only timely but also relevant to the    ║
+║                                                                                   │ user's needs.                                                                                          ║
+╟───────────────────────────────────────────────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────╢
+║ Summarize the importance of the Settings class in the context of document models. │ The Settings class is essential for defining the configuration parameters of document models in Object ║
+║                                                                                   │ Document Mapping. It specifies the name of the collection associated with each document type, ensuring ║
+║                                                                                   │ that data is organized and accessible within the MongoDB database. Each specific document class, such  ║
+║                                                                                   │ as UserDocument or RepositoryDocument, utilizes its own Settings class to establish these parameters.  ║
+║                                                                                   │ This structure not only provides clarity and consistency in how documents are managed, but it also     ║
+║                                                                                   │ supports the overall integrity of data interactions, allowing for efficient querying and manipulation  ║
+║                                                                                   │ of the stored information.                                                                             ║
+╚═══════════════════════════════════════════════════════════════════════════════════╧════════════════════════════════════════════════════════════════════════════════════════════════════════╝
