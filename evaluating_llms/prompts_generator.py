@@ -20,25 +20,3 @@ class PromptsGenerator:
 
     def count(self):
         return self.instructions_dataset.count()
-
-if __name__ == "__main__":
-    from rich import box
-    from rich.table import Table
-    from rich.console import Console
-
-    top = 5
-    prompts_generator = PromptsGenerator()
-
-    table = Table(title=f"Prompts (first {top} records)", show_lines=True, box=box.DOUBLE_EDGE)
-    table.add_column("Instruction")
-    table.add_column("Output")
-    table.add_column("Prompt")
-
-    for record in prompts_generator.generate():
-        table.add_row(record["instruction"], record["output"], record["prompt"])
-
-        if table.row_count >= top:
-            break
-    
-    console = Console()
-    console.print(table)
