@@ -10,27 +10,27 @@ This project was developed as part of my studies with the [AI from Scratch](http
 
 To set up this project on your local machine:
 
-### 1. Clone the repository:
+### Clone the repository
 
 ```bash
 git clone https://github.com/elcapo/llm-engineers-handbook-evaluating-llms.git
 cd llm-engineers-handbook-evaluating-llms
 ```
 
-### 2. Create and activate a virtual environment (recommended):
+### Create and activate a virtual environment
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 ```
 
-### 3. Install the required dependencies:
+### Install the required dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Set up your environment variables:
+### Set up your environment variables
 
 ```bash
 cp env.example .env
