@@ -2,7 +2,7 @@
 
 This repository contains my personal implementation of the coding part from Chapter 7 of the LLM Engineer's Handbook, focusing on **evaluating LLMs** (Large Language Models).
 
-## About This Project
+## About the Project
 
 This project was developed as part of my studies with the [AI from Scratch](https://luma.com/ai-from-scratch) study group. Rather than following the book's code exactly, I've rewritten it from scratch to deepen my understanding of the concepts.
 
@@ -10,28 +10,33 @@ This project was developed as part of my studies with the [AI from Scratch](http
 
 To set up this project on your local machine:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/elcapo/llm-engineers-handbook-evaluating-llms.git
-   cd llm-engineers-handbook-evaluating-llms
-   ```
+### 1. Clone the repository:
 
-2. Create and activate a virtual environment (recommended):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate
-   ```
+```bash
+git clone https://github.com/elcapo/llm-engineers-handbook-evaluating-llms.git
+cd llm-engineers-handbook-evaluating-llms
+```
 
-3. Install the required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+### 2. Create and activate a virtual environment (recommended):
 
-4. Set up your environment variables:
-   ```bash
-   cp env.example .env
-   ```
-   Then edit the `.env` file to add your Hugging Face API token.
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+### 3. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Set up your environment variables:
+
+```bash
+cp env.example .env
+```
+
+Then edit the `.env` file to add your Hugging Face API token.
 
 ## Usage
 
