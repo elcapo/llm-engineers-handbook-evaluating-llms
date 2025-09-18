@@ -45,6 +45,8 @@ View the first few instructions from the dataset:
 ./preview_instructions.py
 ```
 
+An example of the output can be found in [instructions.txt](./assets/texts/instructions.txt).
+
 ### Preview Prompts
 
 View the first few prompts generated from the instructions:
@@ -52,6 +54,8 @@ View the first few prompts generated from the instructions:
 ```bash
 ./preview_prompts.py
 ```
+
+An example of the output can be found in [prompts.txt](./assets/texts/prompts.txt).
 
 ### Preview Answers
 
@@ -67,6 +71,12 @@ Examples:
 ./preview_answers.py mlabonne/TwinLlama-3.1-8B-GGUF https://endpoint-url.location.provider.endpoints.huggingface.cloud
 ```
 
+An example of the output for each model can be found in:
+
+* [meta-llama-3.1-8b-instruct.txt](./assets/texts/answers/meta-llama-3.1-8b-instruct.txt)
+* [twinllama-3-1-8b-gguf.txt](./assets/texts/answers/twinllama-3-1-8b-gguf.txt)
+* [twinllama-3-1-8b-dpo-gguf.txt](./assets/texts/answers/twinllama-3-1-8b-dpo-gguf.txt)
+
 ### Generate All Answers
 
 Generate and save all answers for a specific model:
@@ -80,6 +90,12 @@ Examples:
 ./fetch_all_answers.py meta-llama/Meta-Llama-3.1-8B-Instruct
 ./fetch_all_answers.py mlabonne/TwinLlama-3.1-8B-GGUF https://endpoint-url.location.provider.endpoints.huggingface.cloud
 ```
+
+The generated datasets in JSONL format can be found in:
+
+* [meta-llama-3.1-8b-instruct.jsonl](./datasets/meta-llama-3.1-8b-instruct.jsonl)
+* [twinllama-3.1-8b.jsonl](./datasets/twinllama-3.1-8b.jsonl)
+* [twinllama-3.1-8b-dpo.jsonl](./datasets/twinllama-3.1-8b-dpo.jsonl)
 
 ## Inference Performance
 
