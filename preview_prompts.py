@@ -10,7 +10,7 @@ prompts_generator = PromptsGenerator()
 
 table = Table(title=f"Prompts (first {top} records)", show_lines=True, box=box.DOUBLE_EDGE)
 table.add_column("Instruction")
-table.add_column("Output")
+table.add_column("Output", style="red")
 table.add_column("Prompt", style="cyan")
 
 for record in prompts_generator.generate():
