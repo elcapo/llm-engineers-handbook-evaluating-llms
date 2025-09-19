@@ -145,7 +145,7 @@ The generated datasets of **answers** in JSONL format can be found in:
 Below is a comparison of the evaluation performance for each of the models, although OpenAI was the "LLM judge" in all cases.
 
 | Evaluated Model | Evaluated Answers | Batch Size | Time Elapsed | Answers / Second |
-| --- | --- | ---: | ---: | ---: | ---: |
+| --- | ---: | ---: | ---: | ---: |
 | meta-llama-3.1-8b-instruct | 334 | 4 | 5m 25s | 1.03 |
 | twinllama-3.1-8b | 334 | 4 | 5m 11s | 1.07 |
 | twinllama-3.1-8b-dpo | 334 | 4 | 4m 23s | 1.27 |
