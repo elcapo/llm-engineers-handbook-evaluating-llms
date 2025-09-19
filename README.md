@@ -82,27 +82,27 @@ An example of the output for each model can be found in:
 * [twinllama-3-1-8b-gguf.txt](./assets/texts/answers/twinllama-3-1-8b-gguf.txt)
 * [twinllama-3-1-8b-dpo-gguf.txt](./assets/texts/answers/twinllama-3-1-8b-dpo-gguf.txt)
 
-### Generate All Answers
+### Generate Answers
 
 Generate and save all answers for a specific model:
 
 ```bash
-./generate_all_answers.py <model_id> [endpoint_url]
+./generate_answers.py <model_id> [endpoint_url]
 ```
 
 Examples:
 ```bash
-./generate_all_answers.py meta-llama/Meta-Llama-3.1-8B-Instruct
-./generate_all_answers.py mlabonne/TwinLlama-3.1-8B-GGUF https://endpoint-url.location.provider.endpoints.huggingface.cloud
+./generate_answers.py meta-llama/Meta-Llama-3.1-8B-Instruct
+./generate_answers.py mlabonne/TwinLlama-3.1-8B-GGUF https://endpoint-url.location.provider.endpoints.huggingface.cloud
 ```
 
-The generated datasets in JSONL format can be found in:
+The generated datasets of **answers** in JSONL format can be found in:
 
-* [meta-llama-3.1-8b-instruct.jsonl](./datasets/meta-llama-3.1-8b-instruct.jsonl)
-* [twinllama-3.1-8b.jsonl](./datasets/twinllama-3.1-8b.jsonl)
-* [twinllama-3.1-8b-dpo.jsonl](./datasets/twinllama-3.1-8b-dpo.jsonl)
+* [meta-llama-3.1-8b-instruct.jsonl](./datasets/answers/meta-llama-3.1-8b-instruct.jsonl)
+* [twinllama-3.1-8b.jsonl](./datasets/answers/twinllama-3.1-8b.jsonl)
+* [twinllama-3.1-8b-dpo.jsonl](./datasets/answers/twinllama-3.1-8b-dpo.jsonl)
 
-## Inference Performance
+#### Inference Performance
 
 Below is a comparison of inference performance across different models and setups:
 
@@ -112,9 +112,49 @@ Below is a comparison of inference performance across different models and setup
 | twinllama-3.1-8b | HuggingFace Endpoint (16GB VRAM) | 334 | 4 | 18m 48s | 0.30 |
 | twinllama-3.1-8b-dpo | HuggingFace Endpoint (16GB VRAM) | 334 | 4 | 29m 30s | 0.19 |
 
-The HuggingFace inference endpoints were priced at $0.5 per hour.
-
 ![Instance Analytics](./assets/images/instance-analytics.png)
+
+##### Cost Summary
+
+* The HuggingFace inference endpoints were priced at $0.5 per hour.
+* The entire process had a total cost of $1.34.
+
+![HuggingFace Inference Cost](./assets/images/huggingface-cost.png)
+
+### Evaluate Answers
+
+Evaluate all answers for a specific model:
+
+```bash
+./evaluate_answers.py <model_id>
+```
+
+Examples:
+```bash
+./evaluate_answers.py meta-llama/Meta-Llama-3.1-8B-Instruct
+```
+
+The generated datasets of **answers** in JSONL format can be found in:
+
+* [meta-llama-3.1-8b-instruct.jsonl](./datasets/evaluations/meta-llama-3.1-8b-instruct.jsonl)
+* [twinllama-3.1-8b.jsonl](./datasets/evaluations/twinllama-3.1-8b.jsonl)
+* [twinllama-3.1-8b-dpo.jsonl](./datasets/evaluations/twinllama-3.1-8b-dpo.jsonl)
+
+#### Evaluation Performance
+
+Below is a comparison of the evaluation performance for each of the models, although OpenAI was the "LLM judge" in all cases.
+
+| Evaluated Model | Evaluated Answers | Batch Size | Time Elapsed | Answers / Second |
+| --- | --- | ---: | ---: | ---: | ---: |
+| meta-llama-3.1-8b-instruct | 334 | 4 | 5m 25s | 1.03 |
+| twinllama-3.1-8b | 334 | 4 | 5m 11s | 1.07 |
+| twinllama-3.1-8b-dpo | 334 | 4 | 4m 23s | 1.27 |
+
+##### Cost Summary
+
+* The entire process had a cost of $0.17.
+
+![OpenAI Inference Cost](./assets/images/openai-cost.png)
 
 ## Notes
 

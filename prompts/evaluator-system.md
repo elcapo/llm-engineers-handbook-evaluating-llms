@@ -1,0 +1,1 @@
+You are a helpful assistant who evaluates answers based on accuracy and style.

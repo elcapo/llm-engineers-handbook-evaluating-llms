@@ -5,7 +5,7 @@ import pathlib
 
 from evaluating_llms.answers_generator import AnswersGenerator
 
-class AnswersDataset:
+class AnswersWriter:
     def __init__(self, model_id: str | None = None, endpoint_url: str | None = None):
         if endpoint_url is not None:
             self.answers_generator = AnswersGenerator(model_id=model_id, endpoint_url=endpoint_url)
@@ -24,7 +24,7 @@ class AnswersDataset:
 
     def get_directory(self) -> str:
         root = pathlib.Path(__file__).parent.parent.resolve()
-        directory = os.path.join(root, "datasets")
+        directory = os.path.join(root, "datasets/answers")
 
         os.makedirs(directory, exist_ok=True)
 
@@ -43,8 +43,3 @@ class AnswersDataset:
             with open(jsonl_path, "a") as f:
                 f.write(json.dumps(item) + '\n')
             yield item
-
-    def load_jsonl(self):
-        jsonl_path = self.get_jsonl_path()
-
-        return Dataset.from_json(jsonl_path)
