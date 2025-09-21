@@ -10,7 +10,7 @@ dataset = InstructionsDataset()
 
 table = Table(title=f"Instructions (first {top} records)", show_lines=True, box=box.DOUBLE_EDGE)
 table.add_column("Instruction", style="cyan")
-table.add_column("Output", style="cyan")
+table.add_column("Output", style="red")
 
 for record in dataset.get_record():
     table.add_row(record["instruction"], record["output"])
