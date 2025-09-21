@@ -4,7 +4,23 @@ This repository contains my personal implementation of the coding part from Chap
 
 ## About the Project
 
-This project was developed as part of my studies with the [AI from Scratch](https://luma.com/ai-from-scratch) study group. Rather than following the book's code exactly, I've rewritten it from scratch to deepen my understanding of the concepts.
+This project was developed as part of my participation in the [AI from Scratch](https://luma.com/ai-from-scratch) study group. Rather than following the book's code exactly, I've rewritten it from scratch to deepen my understanding of the concepts.
+
+### Goal
+
+We want to evaluate this three models:
+
+* Reference model: [meta-llama/Meta-Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Meta-Llama-3.1-8B-Instruct)
+* Finetuned model: [mlabonne/TwinLlama-3.1-8B-GGUF](https://huggingface.co/mlabonne/TwinLlama-3.1-8B-GGUF)
+* DPO model: [mlabonne/TwinLlama-3.1-8B-DPO-GGUF](https://huggingface.co/mlabonne/TwinLlama-3.1-8B-DPO-GGUF)
+
+Using the **instructions** from this dataset:
+
+* Instructions dataset: [mlabonne/llmtwin](https://huggingface.co/datasets/mlabonne/llmtwin)
+
+### Approach
+
+To achieve this, we'll use OpenAI's **gpt-4o-mini** as a judge who will follow the [evaluate-answer](./prompts/evaluate-answer.md) prompt.
 
 ## Installation
 
@@ -190,6 +206,14 @@ Also, it's noticeable how the results presented in the book show how for the fin
 ╟───────────┼────────────────┼────────────────┼─────────────┼─────────────╢
 ║ DPO       │           2.84 │           0.37 │        2.37 │        0.49 ║
 ╚═══════════╧════════════════╧════════════════╧═════════════╧═════════════╝
+```
+
+### Show Slides
+
+Show the slides.
+
+```bash
+marimo run ./show_slides.py
 ```
 
 ## Notes
