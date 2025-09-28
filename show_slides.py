@@ -4,6 +4,29 @@ __generated_with = "0.16.0"
 app = marimo.App(width="medium", layout_file="layouts/show_slides.slides.json")
 
 
+@app.cell
+def _(mo):
+    mo.md(
+        r"""
+    # AI from Scratch
+
+    ## About the Group
+
+    - We are an self organized study group.
+    - Anyone can volunteer to lead the next chapter.
+    - We meet (almost) [every Sunday](https://luma.com/ai-from-scratch) by Zoom.
+    - Sessions are recorded and published in [Youtube](https://www.youtube.com/@santiviquez).
+    - We discuss things in [Discord](https://discord.gg/CsmCJp4Ccn).
+
+    ## Completed Books
+
+    - [Building an LLM from Scratch](https://www.youtube.com/watch?v=13n_kP0dsEw&list=PL9f6Hu4yQOj41F2iHJ7IqZhR_8JU4p0NR).
+    - [AI Engineering](https://www.youtube.com/watch?v=0f4EQiRHm0o&list=PL9f6Hu4yQOj7Y7bMjveGz3pO1QrwhoDX2&index=9).
+    """
+    )
+    return
+
+
 @app.cell(hide_code=True)
 def _(mo):
     mo.md(
