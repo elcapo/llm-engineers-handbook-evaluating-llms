@@ -37,18 +37,8 @@ def _(mo):
 
     * There is no unified approach to measuring a model's performance
     * But there are patterns, recipes and standard benchmarks
-    """
-    )
-    return
 
-
-@app.cell(hide_code=True)
-def _(mo):
-    mo.md(
-        r"""
-    # In this chapter
-
-    We'll cover the following topics:
+    ## In this chapter
 
     * Model evaluation
     * RAG evaluation
@@ -124,6 +114,113 @@ def _(mo):
     * [Winogrande](https://arxiv.org/pdf/1907.10641): common sense reasoning through carefully crafted sentences
     * [PIQA](https://arxiv.org/abs/1911.11641): Physical commonsense understanding
     * [ARC-AGI-3](https://arcprize.org): puzzle based scenarios that require logical and spacial reasining
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Pretraining
+
+    ### Measuring Massivee Multitask Language Understanding (MMLU)
+
+    General knowledge questions across 57 subjects.
+
+    #### Example
+
+    Compute $i + i^2 + i^3 + ... + i^{258} + i^{259}$.
+
+    * **A**: -1
+    * **B**: 1
+    * **C**: 1
+    * **D**: -i
+
+    Answer: **A**
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Pretraining
+
+    ### HellaSwag
+
+    HellaSwag: Can a Machine Really Finish Your Sentence?
+
+    #### Example
+
+    A woman is outside with a bucket and a dog. The dog is running around trying to avoid a bath. She...
+
+    * **A**: Rinses the bucket off with soap and blow dry the dog’s head.
+    * **B**: Uses a hose to keep it from getting soapy.
+    * **C**: Gets the dog wet, then it runs away again.
+    * **D**: Gets into a bath tub with the dog.
+
+    Answer: **C**
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Pretraining
+
+    ### ARC-C
+
+    Multiple-choice science questions that require causal reasoning.
+
+    #### Example
+
+    If the Sun were larger, what would most likely also have to be true for Earth to sustain life?
+
+    * **A**: Earth would have to be further from the Sun.
+    * **B**: Earth would have to be closer to the Sun.
+    * **C**: Earth would have to be smaller.
+    * **D**: Earth would have to be larger.
+
+    Answer: **A**
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Pretraining
+
+    ### WinoGrande
+
+    Set of expert-crafted pronoun resolution problems originally designed to be unsolvable for statistical models that rely on selectional preferences or word associations.
+
+    ### Examples
+
+    * William could only climb begginner walls while Jason climbed advanced ones because **he** was very *weak*.
+
+    * William could only climb begginner walls while Jason climbed advanced ones because **he** was very *strong*.
+
+    First answer: **William**
+
+    Second answer: **Jason**
     """
     )
     return
