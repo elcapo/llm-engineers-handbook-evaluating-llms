@@ -57,12 +57,12 @@ def _(mo):
     ## Machine Learning
 
     * Models typically process and produce structured data
-    * Their evaluation is about how accurate and efficient models are at that
+    * Their evaluation is about how accurate and efficient models are at particular tasks
 
     ## Large Language Models
 
     * Models process and produce unstructured data
-    * Their evaluation is about how well they understand and generate language
+    * Their evaluation is about how well they understand and generate language in different contexts
     """
     )
     return
@@ -72,7 +72,7 @@ def _(mo):
 def _(mo):
     mo.md(
         r"""
-    # Comparing ML and LLM evaluation
+    # Comparing ML and LLM Evaluation
 
     ## Differences
 
@@ -109,7 +109,7 @@ def _(mo):
     ## After Pretraining
 
     * [MMLU](https://arxiv.org/pdf/2009.03300): general knowledge questions across 57 subjects
-    * [HellaSwag](https://arxiv.org/abs/1905.07830) and [HellaSwag-Pro](https://arxiv.org/abs/2502.11393): complete situations with the most likely output from a list of multiple choices
+    * [HellaSwag](https://arxiv.org/abs/1905.07830): complete situations with the most likely output from a list of multiple choices
     * [ARC-C](https://arxiv.org/abs/1803.05457): multiple-choice science questions that require causal reasoning
     * [Winogrande](https://arxiv.org/pdf/1907.10641): common sense reasoning through carefully crafted sentences
     * [PIQA](https://arxiv.org/abs/1911.11641): Physical commonsense understanding
@@ -156,7 +156,7 @@ def _(mo):
 
     ### HellaSwag
 
-    HellaSwag: Can a Machine Really Finish Your Sentence?
+    Can a Machine Really Finish Your Sentence?
 
     #### Example
 
@@ -232,13 +232,156 @@ def _(mo):
         r"""
     # General Purpose LLM Evaluations
 
+    ## After Pretraining
+
+    ### PIQA
+
+    Reasoning about Physical Commonsense in Natural Language.
+
+    ### Examples
+
+    **Goal**: Make an outdoor pillow.
+
+    * **A**: Blow into a tin can and tie with rubber band.
+    * **B**: Blow into a trash bag and tie with rubber band.
+
+    Answer: **B**
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
     ## After Finetuning
 
     * [IFEval](https://arxiv.org/abs/2311.07911): tests the ability to follow instructions
     * [Chatbot Arena](https://arxiv.org/pdf/2403.04132): framework where humans vote for the best answer
     * [AlpacaEval](https://arxiv.org/abs/2404.04475): automatic evaluation of finetuned models highly correlated with the Chatbot Arena
     * [MT-Bench-101](https://arxiv.org/abs/2402.14762): evaluation based in multi-turn conversations
-    * [GAIA](https://arxiv.org/abs/2311.12983): tests abilities like tool usage in a multi-step fashion
+    * [GAIA](https://arxiv.org/abs/2311.12983) & [GAIA2](https://huggingface.co/blog/gaia2): tests abilities like tool usage in a multi-step fashion
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Finetuning
+
+    ### IFEval
+
+    Focuses on a set of "verifiable instructions" (such as "write in more than 400 words" and "mention the keyword of AI at least
+    3 times").
+
+    ### Examples
+
+    Write a casual summary of the U.S. maternity leave policy with two sections (Section 1 and Section 2) and at least 25 sentences.
+
+    Checks:
+
+    - ✅ With two sections (Section 1 and Section 2)
+    - ✅ With at least 25 sentences
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Finetuning
+
+    ### Chatbot Arena
+
+    An Open Platform for Evaluating LLMs by Human Preference.
+
+    ### How it works
+
+    - Users enter a prompt, and two different chatbots generate responses.
+    - The user votes on which response is better (or declares a tie).
+    - Over time, the system calculates rankings based on these votes.
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Finetuning
+
+    ### AlpacaEval
+
+    LLM-based auto-annotators have become a key component of the LLM development process due to their cost-effectiveness and scalability compared to human-based evaluation.
+
+    ### How it works
+
+    - Offers an automated alternative to the Chatbot Arena that achieves a high correlation with it.
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Finetuning
+
+    ### MT-Bench-101
+
+    A Fine-Grained Benchmark for Evaluating Large Language Models in Multi-Turn Dialogues.
+
+    ### Example
+
+    - **Human**: Who won the Men’s Singles at the Australian Open in 2021?
+    - **Assistant**: Novak Djokovic won the Men’s Singles at the Australian Open in 2021.
+    - **Human**: Really? I thought Dominic Thiem won.
+    - **Assistant**: I apologize for the confusion. You are correct. Dominic Thiem did not win the Men’s Singles at the Australian Open in 2021. The correct answer is that Novak Djokovic won the title. I apologize for the incorrect information in my previous response.
+
+    Evaluation: The AI assistant **fails** to meet the evaluation criteria by not maintaining confidence in its original, correct response.
+    """
+    )
+    return
+
+
+@app.cell(hide_code=True)
+def _(mo):
+    mo.md(
+        r"""
+    # General Purpose LLM Evaluations
+
+    ## After Finetuning
+
+    ### GAIA
+
+    A benchmark for General AI Assistants. Completing the tasks requires fundamental abilities such as reasoning, multimodality handling, or tool use proficiency.
+
+    ### Examples
+
+    - **Question**: What was the actual enrollment count of the clinical trial on H. pylori in acne vulgaris patients from Jan-May 2018 as listed on the NIH website?
+    - **Ground truth**: 90
+
+    ### GAIA 2
+
+    > Agents are now evaluated not only on search and retrieval, but also on instruction following over ambiguous or time-sensitive queries, in a noisy and environment with controlled failures - reflecting real-world conditions more than any other simulated environment.
     """
     )
     return
@@ -355,6 +498,8 @@ def _(mo):
     * **Retrieval accuracy**: are the retrieved documents the ones that are most relevant for the task?
     * **Integration quality**: difference between the responses with and without context
     * **Factuality and relevance**: whether the output is relevant and based in the retrieved documents
+
+    Examples: [Ragas](https://docs.ragas.io/en/stable/getstarted/), [ARES](https://ares-ai.vercel.app) & [DeepEval](https://deepeval.com).
     """
     )
     return
@@ -368,7 +513,7 @@ def _(mo):
 
     ## Strengths
 
-    * [Open-source](https://docs.ragas.io/en/stable/getstarted/), easy to integrate with Python workflows
+    * Open-source, easy to integrate with Python workflows
     * Provides multiple metrics (faithfulness, answer relevancy, context precision/recall)
     * Designed for LLM-based evaluation → leverages models to judge quality
     * Flexible: can be extended with custom evaluators
@@ -391,7 +536,7 @@ def _(mo):
 
     ## Strengths
 
-    * [Open-source](https://ares-ai.vercel.app)
+    * Open-source
     * Focuses specifically on retrieval evaluation (before generation)
     * Model-agnostic: does not rely on LLMs for scoring
     * Provides clear, reproducible metrics (recall, precision, F1)
